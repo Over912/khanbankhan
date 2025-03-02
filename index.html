@@ -1,0 +1,70 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FaDownload } from "react-icons/fa";
+import { MdOutlineAccountBalance } from "react-icons/md";
+import { FaRegFilePdf } from "react-icons/fa";
+
+const VerificationPage = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
+      <div className="w-full max-w-3xl">
+        <header className="flex justify-between items-center bg-blue-700 text-white p-4 rounded-xl shadow-md">
+          <a href="/verify/check" className="text-xl font-bold flex items-center">
+            <MdOutlineAccountBalance className="mr-2" /> ХААН Банк
+          </a>
+          <Button variant="ghost" className="text-white">
+            Гарах
+          </Button>
+        </header>
+
+        <Card className="mt-6">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-bold mb-4">Баримтын дэлгэрэнгүй</h2>
+            <div className="grid gap-4">
+              <div className="flex justify-between border-b pb-2">
+                <span className="font-semibold">Нэр:</span>
+                <span>МЭНДСАЙХАН ДАВААХҮҮ</span>
+              </div>
+              <div className="flex justify-between border-b pb-2">
+                <span className="font-semibold">Илгээсэн суваг:</span>
+                <span>Kiosk</span>
+              </div>
+              <div className="flex justify-between border-b pb-2">
+                <span className="font-semibold">Регистр:</span>
+                <span>УК95040337</span>
+              </div>
+              <div className="flex justify-between border-b pb-2">
+                <span className="font-semibold">Илгээсэн огноо:</span>
+                <span>2025-02-28</span>
+              </div>
+              <div className="flex justify-between border-b pb-2">
+                <span className="font-semibold">Хүчингүй болох огноо:</span>
+                <span>2025-03-30</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="mt-6">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-bold mb-4">Файл татах</h2>
+            <div className="flex items-center justify-between p-4 border rounded-md">
+              <div className="flex items-center">
+                <FaRegFilePdf className="text-red-500 text-2xl mr-2" />
+                <span>TsagaahanSAR.pdf</span>
+              </div>
+              <Button variant="outline" className="flex items-center">
+                <FaDownload className="mr-2" /> Татах
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+};
+
+export default VerificationPage;
+
+	
